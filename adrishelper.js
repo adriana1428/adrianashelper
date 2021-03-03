@@ -1,24 +1,15 @@
-/////////////////CONSTANTES (NO MOVER)////////////////
-
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-//////constante//////
 
-const config = require ("./config.json")
-
-//////////ESTADO//////////
-
-bot.on("ready", function() {
-    console.log("I'm ready!");
+bot.on("ready", () => {
+    console.log("Estoy listo!");
  });
  
- let prefix = config.prefix;
  bot.on("message", (message) => {
-   const args = message.content.slice(prefix.length).trim().split(/ +/g);
-   const command = args.shift().toLowerCase();
-  if(commmand === "hola"){
-    message.channel.send("hola, que tal")
-  }
+   if(message.content.startsWith("h!hi")) {
+     message.channel.send("hola!");
+   }
+ 
  });
  
- bot.login(process.env.token)
+ bot.login(process.env.token);
