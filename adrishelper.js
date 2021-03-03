@@ -19,20 +19,6 @@ bot.on("ready", () => {
 
 });
 
-bot.on("message", message => {
-  if(message.content  === ("h!command")){
-    const embed = new MessageEmbed()
-    .setTitle("titulo a")
-    .setDescripcion("pruebas a")
-    .setColor("RANDOM")
-    .setThumbnail("https://media.giphy.com/media/EXBUpzDkvLLFu/giphy.gif")
-    .setFooter("ajio")
-    .setTimestamp();
-    message.channel.send(embed)
-
-
-  }
-})
  bot.login(process.env.token);
 
  
