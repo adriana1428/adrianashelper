@@ -19,10 +19,10 @@ bot.on("message", function(message) {
     const timeTaken = Date.now() - message.createdTimestamp;
     message.reply(`Pong! This message had a latency of ${timeTaken}ms.`);                     
   }
-  else if (command === "sum") {
+  else if (command === "suma") {
     const numArgs = args.map(x => parseFloat(x));
-    const sum = numArgs.reduce((counter, x) => counter += x);
-    message.reply(`The sum of all the arguments you provided is ${sum}!`);                          
+    const suma = numArgs.reduce((counter, x) => counter += x);
+    message.reply(`El total de esta suma es ${suma}!`);                          
   }                            
 });
 
