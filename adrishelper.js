@@ -7,7 +7,7 @@ bot.on("ready", () => {
 
  const prefix = "h!";
 
-client.on("message", function(message) {
+bot.on("message", function(message) {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
