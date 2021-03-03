@@ -1,1 +1,1 @@
-worker: npm adrishelper.js
+worker: npm start
