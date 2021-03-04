@@ -41,20 +41,10 @@ bot.on("message", function(message) {
   
 });
 
-const { bot, MessageEmbed } = require('discord.js');
-  const bot = new bot();
-  bot.on('ready', () => {
-    console.log('I am ready!');
-  });
-  
-  bot.on('message', message => {
-    if (message.content === 'how to embed') {
-      const embed = new MessageEmbed()
-      .setTitle('A slick little embed')
-      .setColor(0xff0000)
-      .setDescription('Hello, this is a slick embed!');
-      message.channel.send(embed);
-    }
-  });
-
+if (message.content.startsWith(prefix +"embed")){
+  message.channel.send({embed: {
+    color: 3447003,
+    description: "Esto es un simple mensaje embed."
+  }});
+}
  bot.login(process.env.token);
