@@ -40,14 +40,7 @@ client.on("message", function(message) {
 });
 
 client.on("message", message => {
-  if (message.author.client) return;
-  if (!message.content.startsWith(prefix)) return;
- 
-  const commandBody = message.content.slice(prefix.length);
-  const args = commandBody.split(' ');
-  const command = args.shift().toLowerCase(); 
-
-   if(message.content === (prefix + "embed")){
+   if(message.content === ("embed")){
      const embed = new  MessageEmbed()
      .setTitle("titulo")
      .serAuthor(message.member.displayName, message.author.displayAvatarURL());
