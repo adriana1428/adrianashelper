@@ -40,11 +40,12 @@ client.on("message", function(message) {
 });
 
 client.on("message", message => {
-   if(message.content === (prefix + "embed")){
+   if(message.content === (prefix + "help")){
      const embed = new  MessageEmbed()
-     .setTitle("titulo")
+     .setTitle("Comandos de Adri's Helper")
      .setAuthor(message.member.displayName, message.author.displayAvatarURL())
-     .setColor(0xffb9b9);
+     .setColor(0xbe68fb)
+     .setThumbnail("https://i.imgur.com/rFmrJQt.png");
      message.channel.send(embed)
    }
   });
