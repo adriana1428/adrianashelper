@@ -40,7 +40,7 @@ client.on("message", function(message) {
 });
 
 client.on("message", message => {
-   if(message.content === ("embed")){
+   if(message.content === (prefix + "embed")){
      const embed = new  MessageEmbed()
      .setTitle("titulo")
      .setAuthor(message.member.displayName, message.author.displayAvatarURL());
