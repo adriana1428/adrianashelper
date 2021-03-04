@@ -42,12 +42,12 @@ bot.on("message", function(message) {
 });
 
 const { Client, MessageEmbed } = require('discord.js');
-  const client = new Client();
-  client.on('ready', () => {
+  const bot = new Client();
+  bot.on('ready', () => {
     console.log('I am ready!');
   });
   
-  client.on('message', message => {
+  bot.on('message', message => {
     if (message.content === 'how to embed') {
       const embed = new MessageEmbed()
       .setTitle('A slick little embed')
