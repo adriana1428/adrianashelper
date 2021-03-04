@@ -43,7 +43,7 @@ client.on("message", message => {
    if(message.content === ("embed")){
      const embed = new  MessageEmbed()
      .setTitle("titulo")
-     .serAuthor(message.member.displayName, message.author.displayAvatarURL());
+     .setAuthor(message.member.displayName, message.author.displayAvatarURL());
      message.channel.send(embed)
    }
   });
