@@ -10,7 +10,7 @@ client.on("ready", () => {
  const prefix = "h!";
 
 client.on("message", function(message) {
-  if (message.author.bot) return;
+  if (message.author.client) return;
   if (!message.content.startsWith(prefix)) return;
  
   const commandBody = message.content.slice(prefix.length);
@@ -42,7 +42,7 @@ client.on("message", function(message) {
 });
 
 client.on("message", message => {
-  if (message.author.bot) return;
+  if (message.author.client) return;
   if (!message.content.startsWith(prefix)) return;
  
   const commandBody = message.content.slice(prefix.length);
