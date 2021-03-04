@@ -2,7 +2,7 @@ const { Client, MessageEmbed, Discord } = require("discord.js");
 const client = new Client();
 
 client.on("ready", () => {
-    console.log("Estoy listo!");
+    console.log("Estoy lista!");
  });
 
  const prefix = "h!";
