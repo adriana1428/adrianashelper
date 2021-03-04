@@ -1,5 +1,6 @@
-const { Client, MessageEmbed  } = require("discord.js");
-const client = new Client();
+const { Client, MessageEmbed, Discord } = require("discord.js");
+const client = new Discord.Client();
+const config = require("./config.json");
 
 client.on("ready", () => {
     console.log("Estoy listo!");
@@ -8,7 +9,7 @@ client.on("ready", () => {
  const prefix = "h!";
 
 client.on("message", function(message) {
-  if (message.author.client) return;
+  if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
  
   const commandBody = message.content.slice(prefix.length);
