@@ -27,14 +27,14 @@ client.on("message", function(message) {
 });
  
  client.on("message", (message) => {
-   if(message.content.startsWith("h!hi")) {
+   if(message.content.startsWith(prefix + "hi")) {
      message.channel.send("hola!");
    }
 
  });
 
  client.on("message", (message) => {
-  if(message.content.startsWith("h!invite")) {
+  if(message.content.startsWith(prefix +"invite")) {
     message.channel.send("https://discord.com/oauth2/authorize?client_id=816478380466634763&scope=bot&permissions=2146967231");
   }
 });
