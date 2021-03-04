@@ -45,7 +45,8 @@ client.on("message", message => {
      .setTitle("Comandos de Adri's Helper")
      .setAuthor(message.member.displayName, message.author.displayAvatarURL())
      .setColor(0xbe68fb)
-     .setThumbnail("https://i.imgur.com/rFmrJQt.png");
+     .setThumbnail("https://i.imgur.com/rFmrJQt.png")
+     .setDescription("h!hi ===> Adri's Helper saluda", "h!invite ===> Invitación del Bot para que entre a tu server", "h!sum (Dígitos a sumar) ===> Se suman los dígitos colocados", "h!ping ===> Se revela el ping del mensaje", "h!help ===> Despliega el menú de comandos del bot");
      message.channel.send(embed)
    }
   });
