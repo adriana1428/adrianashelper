@@ -43,7 +43,8 @@ client.on("message", message => {
    if(message.content === (prefix + "embed")){
      const embed = new  MessageEmbed()
      .setTitle("titulo")
-     .setAuthor(message.member.displayName, message.author.displayAvatarURL());
+     .setAuthor(message.member.displayName, message.author.displayAvatarURL())
+     .setColor(0xffb9b9);
      message.channel.send(embed)
    }
   });
