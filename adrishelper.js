@@ -41,8 +41,8 @@ bot.on("message", function(message) {
   
 });
 
-const { Client, MessageEmbed } = require('discord.js');
-  const bot = new Client();
+const { bot, MessageEmbed } = require('discord.js');
+  const bot = new bot();
   bot.on('ready', () => {
     console.log('I am ready!');
   });
