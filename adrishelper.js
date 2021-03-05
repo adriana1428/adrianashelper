@@ -51,4 +51,31 @@ client.on("message", message => {
    }
   });
 
+  client.snipes = new Map()
+
+  client.on('messageDelete', function(message, channel){
+    client.snipes.set(message.channel.id, {
+      content: message.content,
+      author: message.author,
+      image: message.attachments.first() ? message.attachments.first().proxyURL : null
+    })
+  })
+ client.on('message', message =>{
+   let args = message.content.substring(prefix.length).split(" ")
+
+   if(message.content.startsWith(prefix + "snipe")) {
+     if(!message.member.hasPermission(["MANAGE_CHANNELS"])) return  message.channel.send(":x: You can't use this command :x:")
+
+     const msg  = client.snipes.get(message.channel.id);
+     if (!msg) return message.channel.send(":x: There's nothing to snipe")
+
+     const SnipeEmbed = new Discord.MessageEmbed()
+     .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
+     .setDescription(msg.content)
+     .setColor("RANDOM")
+     .setImage(msg.image)
+
+     message.channel.send(SnipeEmbed)
+   }
+ })
  client.login(process.env.token);
