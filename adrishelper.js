@@ -39,11 +39,11 @@ client.on("message", function(message) {
     .setTitle(":sparkling_heart:  Link de Invitación")
     .setColor(0xbe68fb)
     .setThumbnail("https://i.imgur.com/rFmrJQt.png")
-    .setDescription("Con este link podrás invitarme a los servidores que administres.")
+    .setDescription("Con este link podrás invitar a **Adri's Helper** a los servidores que administres.")
     .setURL('https://discord.com/oauth2/authorize?client_id=816478380466634763&scope=bot&permissions=2146967231')
     .setFooter('Solicitado por: '+message.member.displayName, message.author.avatarURL())
     .setTimestamp()
-    .setImage('https://tenor.com/7QjN.gif');
+    .setImage('https://media.giphy.com/media/BS0d0FHVdrmeI/giphy.gif');
     message.channel.send(embed)
   }
 });
