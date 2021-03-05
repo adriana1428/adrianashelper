@@ -36,10 +36,13 @@ client.on("message", function(message) {
  client.on("message", (message) => {
   if(message.content === (prefix + "invite")){
     const embed = new  MessageEmbed()
-    .setTitle("Link de Invitacion")
+    .setTitle(":sparkling_heart: Link de Invitación")
     .setColor(0xbe68fb)
     .setThumbnail("https://i.imgur.com/rFmrJQt.png")
-    .setDescription("https://discord.com/oauth2/authorize?client_id=816478380466634763&scope=bot&permissions=2146967231");
+    .setDescription("Pincha en 'Link de invitación' para invitar a Adri's Helper a un servidor")
+    .setURL('https://discord.com/oauth2/authorize?client_id=816478380466634763&scope=bot&permissions=2146967231')
+    .setFooter('Solicitado por: '+message.member.displayName, message.author.avatarURL())
+    .setTimestamp();
     message.channel.send(embed)
   }
 });
