@@ -55,7 +55,9 @@ client.on("message", message => {
      .setAuthor(message.member.displayName, message.author.displayAvatarURL())
      .setColor("RANDOM")
      .setThumbnail("https://i.imgur.com/rFmrJQt.png")
-     .setDescription("**- h!hi** ➤ Adri's Helper saluda \n\n**- h!invite** ➤ Invitación del Bot para que entre a tu server \n\n**- h!sum (Dígitos a sumar)** ➤ Se suman los dígitos colocados \n\n**- h!ping** ➤ Se revela el ping del mensaje \n\n**- h!help** ➤ Despliega el menú de comandos del bot \n\n- **h!snipe** ➤ Revela mensajes borrados");
+     .setDescription("**- h!hi** ➤ Adri's Helper saluda \n\n**- h!invite** ➤ Invitación del Bot para que entre a tu server \n\n**- h!sum (Dígitos a sumar)** ➤ Se suman los dígitos colocados \n\n**- h!ping** ➤ Se revela el ping del mensaje \n\n**- h!help** ➤ Despliega el menú de comandos del bot \n\n- **h!snipe** ➤ Revela mensajes borrados")
+     .setFooter('Solicitado por: '+message.member.displayName, message.author.avatarURL())
+     .setTimestamp();
      message.channel.send(embed)
    }
   });
