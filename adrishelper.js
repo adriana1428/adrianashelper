@@ -64,7 +64,6 @@ client.on("message", message => {
    let args = message.content.substring(prefix.length).split(" ")
 
    if(message.content.startsWith(prefix + "snipe")) {
-     if(!message.member.hasPermission([" "])) return  message.channel.send(":x: You can't use this command")
 
      const msg  = client.snipes.get(message.channel.id);
      if (!msg) return message.channel.send(":x: There's nothing to snipe")
