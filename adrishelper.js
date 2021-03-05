@@ -70,12 +70,12 @@ client.on("message", message => {
      if (!msg) return message.channel.send(":x: There's nothing to snipe")
 
      const SnipeEmbed = new Discord.MessageEmbed()
-     .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
-     .setDescription(msg.content)
-     .setColor("RANDOM")
-     .setImage(msg.image)
+       .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
+       .setDescription(msg.content)
+       .setColor("RANDOM")
+       .setImage(msg.image)
 
-     message.channel.send(SnipeEmbed)
+       message.channel.send(SnipeEmbed)
    }
  })
  client.login(process.env.token);
