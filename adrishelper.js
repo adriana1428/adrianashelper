@@ -34,8 +34,13 @@ client.on("message", function(message) {
  });
 
  client.on("message", (message) => {
-  if(message.content.startsWith(prefix +"invite")) {
-    message.channel.send("https://discord.com/oauth2/authorize?client_id=816478380466634763&scope=bot&permissions=2146967231");
+  if(message.content === (prefix + "invite")){
+    const embed = new  MessageEmbed()
+    .setTitle("Link de Invitacion")
+    .setColor(0xbe68fb)
+    .setThumbnail("https://i.imgur.com/rFmrJQt.png")
+    .setDescription("https://discord.com/oauth2/authorize?client_id=816478380466634763&scope=bot&permissions=2146967231");
+    message.channel.send(embed)
   }
 });
 
