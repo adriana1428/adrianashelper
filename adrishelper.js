@@ -5,7 +5,7 @@ function presence() {
   client.user.setPresence({
     status: "online",
     activity: {
-      name: "| Suscribete a Adriana's Universe || Prefijo: h! | Ayuda: h!help |",
+      name: "| Suscribete a Adriana's Universe |   | Prefijo: h! | Ayuda: h!help |",
       type: "PLAYING"
     }
   })
