@@ -6,7 +6,7 @@ function presence() {
     status: "online",
     activity: {
       name: "| Suscribete a Adriana's Universe | Prefijo: h! | Ayuda: h!help |",
-      type: "WATCHING"
+      type: "PLAYING"
     }
   })
 }
