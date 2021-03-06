@@ -1,6 +1,5 @@
 const { Client, MessageEmbed, Discord } = require("discord.js");
 const client = new Client();
-const config = require("./config.json")
 
 function presence() {
   client.user.setPresence({
