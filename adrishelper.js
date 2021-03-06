@@ -3,17 +3,18 @@ const client = new Client();
 
 function presence() {
   client.user.setPresence({
-    status: "En Línea",
+    status: "online",
     activity: {
-      name: "YouTube: Adriana's Universe",
-      type: "WATCHING"
+      name: "| Suscribete a Adriana's Universe | Prefijo: h! | Ayuda: h!help |",
+      type: "CUSTOM_STATUS",
+      image: "https://i.imgur.com/S7ApBbv.jpg"
     }
   })
 }
 
 client.on("ready", () => {
     console.log("Estoy lista!");
-    presence()
+    presence();
  });
 
  const prefix = "h!";
