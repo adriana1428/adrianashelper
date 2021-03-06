@@ -1,8 +1,20 @@
 const { Client, MessageEmbed, Discord } = require("discord.js");
 const client = new Client();
+const config = require("./config.json")
+
+function presence() {
+  client.user.setPresence({
+    status: "En Línea",
+    activity: {
+      name: "YouTube: Adriana's Universe",
+      type: "WATCHING"
+    }
+  })
+}
 
 client.on("ready", () => {
     console.log("Estoy lista!");
+    presence()
  });
 
  const prefix = "h!";
