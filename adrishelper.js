@@ -6,7 +6,7 @@ function presence() {
     status: "online",
     activity: {
       name: "| Suscribete a Adriana's Universe | Prefijo: h! | Ayuda: h!help |",
-      type: "CUSTOM_STATUS",
+      type: "STREAMING",
       image: "https://i.imgur.com/S7ApBbv.jpg"
     }
   })
